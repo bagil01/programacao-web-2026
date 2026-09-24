@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeVerse | Universo dos Animes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="hero">
+            <span class="etiqueta">ANIMEVERSE</span>
+            <h1>Explore mundos incríveis dos animes</h1>
+            <p>Descubra histórias marcantes, personagens inesquecíveis e aventuras que conquistaram fãs no mundo inteiro.</p>
+            <div class="busca">
+                <input id="campoBusca" type="text" placeholder="Digite o nome de um anime...">
+                <button id="botaoLimpar" type="button">Limpar</button>
+            </div>
+            <p id="mensagemBusca" class="mensagem">Digite um anime para filtrar os cards.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalogo">
+            <div class="titulo-secao">
+                <span>RECOMENDAÇÕES</span>
+                <h2>Alguns animes para conhecer</h2>
+            </div>
+
+            <div id="listaAnimes" class="grid-animes">
+                <article class="card-anime">
+                    <img src="./imagens/naruto.jpg" alt="Capa do anime Naruto">
+                    <div class="conteudo-card">
+                        <h3>Naruto</h3>
+                        <p> Naruto acompanha um jovem ninja que busca reconhecimento e sonha em se tornar Hokage de sua vila.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+
+
+                <article class="card-anime">
+                    <img src="imagens/one piece.jpg" alt="Capa do anime One Piece">
+                    <div class="conteudo-card">
+                        <h3>One Piece</h3>
+                        <p>Monkey D. Luffy parte em uma grande aventura pelo mar em busca do lendário tesouro chamado One Piece.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+
+                <article class="card-anime">
+                    <img src="imagens/demon_slayer.jpg" alt="Capa de Demon Slayer">
+                    <div class="conteudo-card">
+                        <h3>Demon Slayer</h3>
+                        <p>Tanjiro inicia uma jornada para proteger sua irmã e enfrentar demônios enquanto procura uma forma de ajudá-la.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+
+                <article class="card-anime">
+                    <img src="imagens/jujutsu.jpg" alt="Capa de Jujutsu Kaisen">
+                    <div class="conteudo-card">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>Yuji Itadori entra no mundo dos feiticeiros após um encontro com uma poderosa maldição.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+
+                <article class="card-anime">
+                    <img src="imagens/attack.jpg" alt="Capa de Attack on Titan">
+                    <div class="conteudo-card">
+                        <h3>Attack on Titan</h3>
+                        <p>Uma humanidade cercada por enormes muralhas luta para sobreviver diante da ameaça dos titãs.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+
+                <article class="card-anime">
+                    <img src="imagens/my_academina.jpg" alt="Capa de My Hero Academia">
+                    <div class="conteudo-card">
+                        <h3>My Hero Academia</h3>
+                        <p>Izuku Midoriya sonha em ser herói em um mundo onde grande parte das pessoas possui superpoderes.</p>
+                        <button class="botao-detalhes" type="button">Mostrar destaque</button>
+                    </div>
+                </article>
+            </div>
+
+            <p id="semResultado" class="sem-resultado">Nenhum anime encontrado.</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>AnimeVerse • Uma pequena viagem pelo universo dos animes.</p>
+
+        <button id="botaoTema" type="button">Ativar modo neon</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
