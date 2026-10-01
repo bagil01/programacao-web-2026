@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeVerse | Universo dos Animes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>ANIMEVERSE</h1>
+            <p>Cadastre e organize seus animes favoritos.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="formulario">
+            <h2>Cadastrar anime</h2>
+            <form id="formAnime">
+                <div class="campo">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" required>
+                </div>
+                <div class="campo">
+                    <label for="genero">Gênero</label>
+                    <input type="text" id="genero" required>
+                </div>
+                <div class="campo">
+                    <label for="ano">Ano</label>
+                    <input type="number" id="ano" min="1960" max="2100" required>
+                </div>
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="4" required></textarea>
+                </div>
+                <div class="control">
+                    <button type="submit">Cadastrar anime</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="catalogo">
+            <div class="cabecalho-lista">
+                <div>
+                    <h2>Animes cadastrados</h2>
+                    <p id="contador">0 anime(s) cadastrado(s)</p>
+                </div>
+                <button id="limparRegistros" type="button" class="botao-secundario">Limpar registros</button>
+            </div>
+            <div id="listaAnimes" class="lista"></div>
+            <p id="mensagemVazia" class="vazio">Nenhum anime cadastrado.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>AnimeVerse • Uma pequena viagem pelo universo dos animes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

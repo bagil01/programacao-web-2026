@@ -1,0 +1,208 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+background: #ffffff;
+color: #000000;
+min-height: 100vh;
+}
+
+header {
+background:
+        radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.45), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(0, 212, 255, 0.35), transparent 30%),
+        linear-gradient(135deg, #080b16, #171334 55%, #091d32);
+
+color: #ffffff;
+padding: 55px 20px;
+text-align: center;
+}
+
+header h1 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+header p {
+font-size: 18px;
+}
+
+.container {
+width: min(1000px, calc(100% - 40px));
+margin: 0 auto;
+}
+
+main {
+padding: 45px 0;
+}
+
+.formulario,
+.catalogo {
+box-shadow: 0 3px 5px 5px #0000002d;  
+border-radius:15px;
+padding: 30px;
+margin-bottom: 30px;
+}
+
+h2 {
+font-size: 26px;
+margin-bottom: 25px;
+}
+
+form {
+display: grid;
+gap: 20px;
+}
+
+.campo {
+display: grid;
+gap: 8px;
+}
+
+label {
+font-weight: bold;
+}
+
+input,
+textarea {
+max-width: 916px;
+border: 1px solid #000000;
+background: #ffffff;
+color: #000000;
+padding: 13px;
+font-size: 16px;
+font-family: inherit;
+outline: none;
+}
+
+input:focus,
+textarea:focus {
+background: #f2f2f2;
+}
+.control{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+button {
+border: none;
+border-radius: 15px;
+background: #084c4f;
+color: #ffffff;
+padding: 13px 20px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+background: #ffffff;
+border: solid 1px ;
+transition:0.5s;
+color: #000000;
+}
+
+.cabecalho-lista {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+border-bottom: 1px solid #000000;
+padding-bottom: 20px;
+margin-bottom: 25px;
+}
+
+.cabecalho-lista h2 {
+margin-bottom: 5px;
+}
+
+#contador {
+font-size: 14px;
+}
+
+.botao-secundario {
+background: #ff0000;
+color: #ffffff;
+}
+
+.lista {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.card {
+border: 1px solid #000000;
+padding: 22px;
+}
+
+.card h3 {
+font-size: 23px;
+margin-bottom: 12px;
+}
+
+.info {
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+margin-bottom: 15px;
+}
+
+.info span {
+border: 1px solid #000000;
+padding: 5px 9px;
+font-size: 13px;
+}
+
+.card p {
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.card button {
+width: 100%;
+}
+
+.vazio {
+text-align: center;
+border: 1px dashed #000000;
+padding: 30px;
+}
+
+footer {
+background:
+        radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.45), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(0, 212, 255, 0.35), transparent 30%),
+        linear-gradient(135deg, #080b16, #171334 55%, #091d32);
+color: #f2f2f2;
+border-top: 1px solid #000000;
+text-align: center;
+padding: 25px;
+font-size: 14px;
+}
+
+@media (min-width: 300px) and (max-width: 900px){
+header h1 {
+font-size: 32px;
+}
+input, textarea {
+    max-width: 556px;
+}
+.lista {
+grid-template-columns: 1fr;
+}
+
+.cabecalho-lista {
+flex-direction: column;
+align-items: stretch;
+}
+
+.formulario,
+.catalogo {
+padding: 20px;
+}
+}
