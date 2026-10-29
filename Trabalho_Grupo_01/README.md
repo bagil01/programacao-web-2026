@@ -1,7 +1,7 @@
 # Catálogo Interativo de Produtos
 
 **Disciplina:** Programação Web — Trabalho em Grupo 1
-**Integrantes:** (preencher com os nomes do grupo)
+**Integrantes:** Ânderson nunes da silva
 
 Aplicação web feita apenas com HTML, CSS e JavaScript (sem frameworks), que consome a
 [DummyJSON Products API](https://dummyjson.com/docs/products).
