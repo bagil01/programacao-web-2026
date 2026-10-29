@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topo">
+    <h1>Catálogo de Produtos</h1>
+    <form id="form-busca" role="search">
+      <label for="busca" class="sr-only">Pesquisar produtos por nome</label>
+      <input type="search" id="busca" placeholder="Pesquisar por nome (ex.: phone)" autocomplete="off">
+      <button type="submit">Pesquisar</button>
+    </form>
+    <nav class="abas" aria-label="Visualização">
+      <button type="button" id="aba-todos" class="ativa">Produtos</button>
+      <button type="button" id="aba-favoritos">Favoritos <span id="contador">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="lista" class="grade" aria-label="Lista de produtos"></section>
+  </main>
+
+  <dialog id="detalhes" aria-labelledby="det-titulo">
+    <button type="button" id="fechar" class="fechar" aria-label="Fechar detalhes">Fechar</button>
+    <div id="det-conteudo"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

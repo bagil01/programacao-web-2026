@@ -1,0 +1,267 @@
+:root {
+  --fundo: #eef2f5;
+  --superficie: #ffffff;
+  --tinta: #14202b;
+  --suave: #5a6b7a;
+  --linha: #d3dce4;
+  --destaque: #0f766e;
+  --destaque-esc: #0b5a54;
+  --favorito: #c2410c;
+  --erro: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--tinta);
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+.topo {
+  background: var(--superficie);
+  border-bottom: 1px solid var(--linha);
+  padding: 1.25rem 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.topo h1 {
+  margin: 0 0 .75rem;
+  font-size: 1.5rem;
+  letter-spacing: -.01em;
+}
+
+#form-busca {
+  display: flex;
+  gap: .5rem;
+  max-width: 40rem;
+}
+
+#form-busca input {
+  flex: 1;
+  padding: .6rem .8rem;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+}
+
+#form-busca button,
+.btn {
+  background: var(--destaque);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: .6rem 1rem;
+  cursor: pointer;
+}
+
+#form-busca button:hover,
+.btn:hover {
+  background: var(--destaque-esc);
+}
+
+.abas {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: .75rem;
+}
+
+.abas button {
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: .5rem 0;
+  cursor: pointer;
+  color: var(--suave);
+}
+
+.abas button.ativa {
+  color: var(--tinta);
+  border-bottom-color: var(--destaque);
+  font-weight: 600;
+}
+
+#contador {
+  background: var(--favorito);
+  color: #fff;
+  border-radius: 999px;
+  font-size: .75rem;
+  padding: .05rem .5rem;
+  margin-left: .25rem;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#status {
+  min-height: 1.5rem;
+  color: var(--suave);
+}
+
+#status.erro {
+  color: var(--erro);
+  font-weight: 600;
+}
+
+.grade {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.cartao {
+  background: var(--superficie);
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cartao img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #f6f8fa;
+}
+
+.cartao .corpo {
+  padding: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1;
+}
+
+.cartao h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.preco {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.acoes {
+  margin-top: auto;
+  display: flex;
+  gap: .5rem;
+}
+
+.acoes button {
+  flex: 1;
+  padding: .5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--destaque);
+  background: var(--superficie);
+  color: var(--destaque);
+}
+
+.acoes button:hover {
+  background: #e6f4f2;
+}
+
+.acoes .btn-fav.ativo {
+  background: var(--favorito);
+  border-color: var(--favorito);
+  color: #fff;
+}
+
+dialog {
+  border: 0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: min(40rem, 92vw);
+  max-height: 90vh;
+  overflow: auto;
+}
+
+dialog::backdrop {
+  background: rgba(20, 32, 43, .55);
+}
+
+.fechar {
+  float: right;
+  background: none;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  padding: .3rem .7rem;
+  cursor: pointer;
+}
+
+.det {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.det img {
+  width: 100%;
+  max-height: 18rem;
+  object-fit: contain;
+  background: #f6f8fa;
+  border-radius: 6px;
+}
+
+.det h2 {
+  margin: 0 0 .25rem;
+}
+
+.det dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .25rem 1rem;
+  margin: 0;
+}
+
+.det dt {
+  color: var(--suave);
+}
+
+.det dd {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .det {
+    grid-template-columns: 14rem 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
